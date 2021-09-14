@@ -25,10 +25,10 @@ def getUserListRouter():
         print(errorMssage)
         return {
             'status': 'fail',
-            'msg': '[SQLite 에러] :' + errorMssage,
+            'msg': '[SQLite error] :' + errorMssage,
         }
     except:
         return {
             'status': 'fail',
-            'msg': '[예상불가 에러] : 에러 발생',
+            'msg': '[Unexpected error] : 에러 발생',
         }

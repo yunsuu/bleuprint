@@ -24,15 +24,15 @@ def postAddUserRouter():
         if errorMssage == 'UNIQUE constraint failed: users.email':
             return {
                 'status': 'fail',
-                'msg': "[SQLite 에러] : 이미 등록된 email이 있습니다. 새로운 이메일로 등록해주세요."
+                'msg': "[SQLite error] : 이미 등록된 email이 있습니다. 새로운 이메일로 등록해주세요."
             }
         else:
             return {
                 'status': 'fail',
-                'msg': "[SQLite 에러] : " + errorMssage
+                'msg': "[SQLite error] : " + errorMssage
             }
     except:
         return {
             'status': 'fail',
-            'msg': '[예상불가 에러] : 에러 발생',
+            'msg': '[Unexpected error] : 에러 발생',
         }
