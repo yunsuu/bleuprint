@@ -1,10 +1,10 @@
 from flask import Flask
-from . import getUserList
-from . import postAddUser
-from . import putUpdateUser
-from . import deleteUser
-from . import postSendMail
-from . import sendMailToAll
+from .routers import getUserList
+from .routers import postAddUser
+from .routers import putUpdateUser
+from .routers import deleteUser
+from .routers import postSendMail
+from .routers import sendMailToAll
 
 app = Flask(__name__)
 
